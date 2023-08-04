@@ -1,15 +1,15 @@
 import { useState } from "react"
 
 export function NewTodoForm({ onSubmit }) {
-  const [newItem, setNewItem] = useState("")
+  const [newOne, setNewOne] = useState("")
 
   function handleSubmit(e) {
     e.preventDefault()
-    if (newItem === "") return
+    if (newOne === "") return
 
-    onSubmit(newItem)
+    onSubmit(newOne)
 
-    setNewItem("")
+    setNewOne("")
   }
 
   return (
@@ -17,8 +17,8 @@ export function NewTodoForm({ onSubmit }) {
       <div className="form-row">
         <label htmlFor="item">New Item</label>
         <input
-          value={newItem}
-          onChange={e => setNewItem(e.target.value)}
+          value={newOne}
+          onChange={e => setNewOne(e.target.value)}
           type="text"
           id="item"
         />
