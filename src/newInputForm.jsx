@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function NewTodoForm({ onSubmit }) {
+export function NewInputForm({ onSubmit }) {
   const [newOne, setNewOne] = useState("")
 
   function handleSubmit(e) {

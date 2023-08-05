@@ -1,12 +1,12 @@
-import { TodoItem } from "./TodoItem"
+import { InputItem } from "./InputItem"
 
-export function TodoList({ todos, toggleTodo, deleteTodo }) {
+export function InputList({ todos, toggleTodo, deleteTodo }) {
   return (
     <ul className="list">
-      {todos.length === 0 && "No Todos"}
+      {todos.length === 0 && "Please Insert Your first Item..."}
       {todos.map(todo => {
         return (
-          <TodoItem
+          <InputItem
             {...todo}
             key={todo.id}
             toggleTodo={toggleTodo}

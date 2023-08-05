@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { NewTodoForm } from "./NewTodoForm"
+import { NewInputForm } from "./newInputForm"
 import "./styles.css"
-import { TodoList } from "./TodoList"
+import { InputList } from "./InputList"
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -44,9 +44,9 @@ export default function App() {
 
   return (
     <>
-      <NewTodoForm onSubmit={addTodo} />
+      <NewInputForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <InputList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   )
 }
