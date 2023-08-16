@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function App() {
+function Advice() {
     const [advice, setAdvice] = useState("");
     const [count, setCount] = useState(0);
 
@@ -29,7 +29,7 @@ function Message(props) {
         <p>
             You have read <strong>{props.count}</strong> pieces of advice
         </p>
-    )
+    );
 }
 
-export default App
+export default Advice

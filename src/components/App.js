@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom"
 import Logo from "./Logo";
 import Form from "./Form";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
+import Advice from "./Advice";
+import NavBar from "./NavBar";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -32,18 +35,28 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <Logo />
-      <Form onAddItems={handleAddItems} />
-      <PackingList
-        items={items}
-        onDeleteItem={handleDeleteItem}
-        onToggleItem={handleToggleItem}
-        onClearList={handleClearList}
-      />
-      <Stats items={items} />
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/about">
+          <Advice />
+        </Route>
+        <Route exact path="/">
+          <div className="app">
+          <Logo />
+          <Form onAddItems={handleAddItems} />
+          <PackingList
+          items={items}
+          onDeleteItem={handleDeleteItem}
+          onToggleItem={handleToggleItem}
+          onClearList={handleClearList}
+          />
+        <Stats items={items} />
+        </div>
+        </Route>
+      </Switch>
     </div>
-  )
+  );  
 }
 
 export default App;
