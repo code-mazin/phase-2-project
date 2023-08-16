@@ -17,8 +17,8 @@ function Advice() {
 
     return (
         <div>
-            <h1>{advice}</h1>
-            <button onClick={getAdvice}>Get advice</button>
+            <h3 style={{ marginTop: "20px"}}>{advice}</h3>
+            <button style={{ marginTop: "40px"}} onClick={getAdvice}>Get advice</button>
             <Message count={count}/>
         </div>
     );
@@ -26,7 +26,7 @@ function Advice() {
 
 function Message(props) {
     return (
-        <p>
+        <p style={{ marginTop: "20px"}}>
             You have read <strong>{props.count}</strong> pieces of advice
         </p>
     );

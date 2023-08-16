@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const linkStyles = {
-    display: "inline-block",
+    display: "inline",
     width: "50px",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "blue",
+    background: "#5a3e2b",
     textDecoration: "none",
-    color: "white",
+    color: "green",
 };
 
 function NavBar() {
@@ -22,7 +22,7 @@ function NavBar() {
                 style={linkStyles}
                 // add prop for activeStyles
                 activeStyle={{
-                    background: "darkblue",
+                    background: "#f4a226",
                 }}
             >
                 Home
@@ -32,7 +32,7 @@ function NavBar() {
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: 'darkblue',
+                    background: '#f4a226',
                 }}
             >
                 About
