@@ -7,6 +7,7 @@ import Stats from "./Stats";
 import Advice from "./Advice";
 import NavBar from "./NavBar";
 import About from "./About";
+import Error from "./My404Component";
 
 function App() {
   // moving state to parent component, we need the data from form component into packinglist component
@@ -46,6 +47,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
+        
         <Route exact path="/about">
           <Advice />
           <About />
@@ -66,6 +68,9 @@ function App() {
         {/* pass items as a prope into stats to calculate stats */}
         <Stats items={items} />
         </div>
+        </Route>
+        <Route exact path='*'>
+          <Error />
         </Route>
       </Switch>
     </div>
