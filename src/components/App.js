@@ -34,10 +34,11 @@ function App() {
   }
 
   function handleClearList() {
+    // send warning message before deleting the list
     const confirmed  = window.confirm(
       "Are you sure you want to delete all items?"
     );
-
+      // to clear items simply return it to intial state
     if (confirmed) setItems([]);
   }
 
